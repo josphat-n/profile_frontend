@@ -1,0 +1,180 @@
+.dialog {
+    align-items: center;
+    display: none;
+    height: 100vh;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+}
+
+.dialog.show {
+    display: flex;
+}
+
+.dialog::before {
+    backdrop-filter: blur(2px);
+    background: rgba(0, 0, 0, 0.1);
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    width: 100%;
+    z-index: -1;
+}
+
+.dialog.show::before {
+    animation: fade_show 0.5s forwards;
+}
+
+.dialog-content {
+    background: #ffffff;
+    border: 1px solid #e7e7eb;
+    border-radius: 10px;
+    box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.2);
+    max-width: 450px;
+    opacity: 0;
+    position: relative;
+    transform: translateY(-30px);
+    visibility: hidden;
+    width: 100%;
+}
+
+.dialog.show .dialog-content {
+    animation: dialog_show 0.5s forwards;
+}
+
+.dialog-header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem 1.2rem;
+}
+
+.dialog-title {
+    color: #212129;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.btn-dialog-close {
+    align-items: center;
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    color: #474752;
+    cursor: pointer;
+    display: inline-flex;
+    height: 35px;
+    justify-content: center;
+    min-width: 35px;
+    position: relative;
+    text-decoration: none;
+    user-select: none;
+    width: 35px;
+}
+
+.btn-dialog-close i {
+    position: relative;
+    top: 1px;
+}
+
+.btn-dialog-close:hover {
+    background: #efeff1;
+}
+
+.btn-dialog-close:active {
+    background: #dbdbdf;
+}
+
+.dialog-body {
+    padding: 0.5rem 1.2rem;
+}
+
+.dialog-message {
+    color: #4c4c52;
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0;
+    text-align: center;
+}
+
+.dialog-footer {
+    align-items: center;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    padding: 0.8rem 1.2rem;
+}
+
+.btn-dialog {
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1rem;
+    padding: 0.4rem 1.2rem;
+    position: relative;
+    text-decoration: none;
+    transition: background 0.3s, color 0.1s;
+    user-select: none;
+}
+
+.btn-dialog-cancel {
+    background: #a4a5af;
+    color: #ffffff;
+}
+
+.btn-dialog-cancel:hover {
+    background: #5b5c64;
+    color: #ffffff;
+}
+
+.btn-dialog-delete {
+    background: #f8ecec;
+    color: #ca0a0a;
+}
+
+.btn-dialog-delete:hover {
+    background: #ee1a1a;
+}
+
+.btn-dialog-confirm {
+    background: #f8ecec;
+    color: darkblue;
+}
+
+.btn-dialog-confirm:hover {
+    background: mediumblue;
+    color: #ffffff;
+}
+
+@keyframes fade_show {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes dialog_show {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+}

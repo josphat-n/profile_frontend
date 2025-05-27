@@ -1,0 +1,223 @@
+.login-wrapper {
+    align-items: center;
+    color: #295b0a;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.4rem;
+    height: 100vh;
+    min-width: 30vw;
+    padding: 10vh 0;
+}
+
+.login-wrapper__header > div + div {
+    margin-top: 1em;
+}
+
+.login-wrapper__header {
+    min-width: inherit;
+}
+
+.login-wrapper__header__avatar {
+    color: #404142;
+    text-align: center;
+}
+
+.login-wrapper__header__title-one {
+    background: #295b0a;
+    border: 3px solid #C09100;
+    border-radius: 30px;
+    color: white;
+    display: flex;
+    /*font-family: "Arima Madurai", cursive;*/
+    font-size: 2rem;
+    font-weight: bolder;
+    justify-content: center;
+    line-height: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.8em;
+    width: 80%;
+}
+
+.login-wrapper__header__title-two {
+    color: #295b0a;
+    font-size: 1.7rem;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.login {
+    background-color: rgb(233, 240, 232);
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    justify-content: center;
+    margin-top: 1em;
+    min-width: inherit;
+    padding: 2.5rem 0.5rem;
+}
+
+.login > div + div {
+    margin-top: 1em;
+}
+
+.login__field-row {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2em;
+}
+
+.login__header {
+    font-weight: bolder;
+    font-size: 2rem;
+    text-align: center;
+    height: 20%;
+}
+
+.login__buttons-request {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    background: #295b0a;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px 1px #ccc;
+    display: flex;
+    cursor: pointer;
+}
+
+.login__buttons-request span {
+    background: #fff;
+    border: none;
+    border-radius: inherit;
+    margin-left: 0.5em;
+    outline: none;
+    width: 100%;
+    height: 8rem;
+    align-content: center;
+}
+
+.login__buttons-back,
+.login__buttons-submit {
+    padding: 0.8em 2em;
+    border: 2px solid #fff;
+    border-radius: 16px;
+    box-shadow: 0 0 10px 1px #ccc;
+    cursor: pointer;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+}
+
+.login__form-field {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 5px;
+}
+
+.login__forgot-field > span {
+    text-align: left;
+}
+
+.custom-btn {
+    border: 2px solid #fff;
+    border-radius: 16px;
+    box-shadow: 0 0 10px 1px #ccc;
+    cursor: pointer;
+}
+
+.submit--btn {
+    background: #295b0a;
+    color: #fff;
+    padding: 0.8em 2em;
+    z-index: 2;
+}
+
+.cancel--btn {
+    background: gray;
+    color: #fff;
+    padding: 0.8em 2em;
+    z-index: 2;
+}
+
+.login__submit-field,
+.login__forgot-field {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.login a {
+    color: #009242;
+    text-decoration: underline;
+}
+
+.login__label {
+    flex: 1;
+    margin-right: 1rem;
+    min-width: max-content;
+    text-align: right;
+}
+
+.login__input-field {
+    align-items: center;
+    background: #295b0a;
+    border: 2px solid #295b0a;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px 1px #ccc;
+    display: flex;
+    width: 70%;
+}
+
+.login__input-field i,
+.login__buttons-request i {
+    color: white;
+    margin-left: 0.5em;
+}
+
+.login__input-field input {
+    background: #fff;
+    border: none;
+    border-radius: inherit;
+    color: #C09100;
+    margin-left: 0.5em;
+    outline: none;
+    padding: 0.8em 1em;
+    width: 100%;
+}
+
+.login__input-field::placeholder {
+    color: #C09100;
+}
+
+.btn-display {
+    position: relative;
+}
+
+.btn-placement-one {
+    position: absolute;
+    right: 2rem;
+    top: 1rem;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.half-width {
+    width: 50%;
+}
+
+.verification {
+    font-size: 1.5em;
+    line-height: 2em;
+}
+
+.direction {
+    flex-direction: column;
+}
